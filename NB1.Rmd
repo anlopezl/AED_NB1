@@ -136,7 +136,7 @@ En general, al medir una variable, los datos observados pueden clasificarse en d
 
 -   Nominal (cualitativa). Ej: Unidad de masa en la que se mide la producción de carbón.
 
-    -   Relación de **igualdad - desigualdad**: Dos paises con producción de carbón en toneladas tienen *la misma* unidad de masa en la medición. Un pais con producción de carbón en kilogramos y otro en toneladas tienen *diferente* unidad de masa.
+    -   Relación de **igualdad - desigualdad**: Dos países con producción de carbón en toneladas tienen *la misma* unidad de masa en la medición. Un pais con producción de carbón en kilogramos y otro en toneladas tienen *diferente* unidad de masa.
 
 -   Ordinal (cualitativa). Ej: Categorías de consumo de electricidad en hogares (alto, medio, bajo).
 
@@ -198,7 +198,7 @@ Una vez discretizada la variable, la frecuencia absoluta o relativa es medida pa
 
 ```{r}
 hist(charcoal_prd19$Quantity,
-     main = 'Histograma de producción de carbón por paises-áreas\nAño 2019',
+     main = 'Histograma de producción de carbón por países-áreas\nAño 2019',
      xlab = 'Intervalos de clase - Producción (en miles de toneladas métricas) de carbón',
      ylab = 'Frecuencia absoluta')
 ```
@@ -219,7 +219,7 @@ Se puede apreciar con el gráfico que la distribución de los datos está caract
 ```{r}
 ### Solución
 h_freq = hist(charcoal_chh19$Quantity,
-              main = 'Histograma de consumo de carbón por paises-áreas\nAño 2019',
+              main = 'Histograma de consumo de carbón por países-áreas\nAño 2019',
               xlab = 'Intervalos de clase - Consumo (en miles de toneladas métricas) de carbón',
               ylab = 'Frecuencia absoluta')
 
@@ -237,7 +237,7 @@ Para el primer problema, podríamos solucionarlo parcialmente identificando las 
 
 ```{r fig.align = "center"}
 hist(charcoal_prd19$Quantity,
-     main = 'Histograma de producción de carbón por paises - áreas\nAño 2019 - con estadísticas resumen',
+     main = 'Histograma de producción de carbón por países - áreas\nAño 2019 - con estadísticas resumen',
      xlab = 'Intervalos de clase - Producción (en miles de toneladas métricas) de carbón',
      ylab = 'Frecuencia absoluta')
 
@@ -279,7 +279,7 @@ Al ubicar los dos gráficos en una misma escala (note que el gráfico de boxplot
 ```{r fig.align = "center", fig.height=10,fig.width=10 }
 par(mfrow=c(2,1))
 hist(charcoal_prd19$Quantity,
-     main = 'Histograma de producción de carbón por paises - áreas\nAño 2019 - con estadísticas resumen',
+     main = 'Histograma de producción de carbón por países - áreas\nAño 2019 - con estadísticas resumen',
      xlab = 'Intervalos de clase - Producción (en miles de toneladas métricas) de carbón',
      ylab = 'Frecuencia absoluta',
      xlim = c(0,6500))
@@ -289,7 +289,7 @@ abline(v = mean(charcoal_prd19$Quantity),col='blue')
 abline(v = min(charcoal_prd19$Quantity),col='red')
 
 boxplot(charcoal_prd19$Quantity,horizontal = TRUE,ylim = c(0,6500),
-        main = 'Boxplot (orientacíon horizontal) de producción de carbón por paises - áreas\nAño 2019',
+        main = 'Boxplot (orientacíon horizontal) de producción de carbón por países - áreas\nAño 2019',
         xlab = 'Producción (en miles de toneladas métricas) de carbón')
 ```
 
@@ -301,7 +301,7 @@ boxplot(charcoal_prd19$Quantity,horizontal = TRUE,ylim = c(0,6500),
 ```{r}
 ### Solución
 bp_cons = boxplot(charcoal_chh19$Quantity,horizontal = FALSE,
-                  main = 'Boxplot de consumo de carbón por paises - áreas\nAño 2019',
+                  main = 'Boxplot de consumo de carbón por países - áreas\nAño 2019',
                   xlab = 'Consumo (en miles de toneladas métricas) de carbón')
 ```
 
@@ -327,7 +327,7 @@ El segundo problema mencionado en la elaboración del histograma se relaciona co
 par(mfrow=c(2,3))
 for(k in c(5,10,25,50,75,100)){
 hist(charcoal_prd19$Quantity,breaks=k,
-     main = paste0('Histograma de producción de carbón\npor paises - áreas. Año 2019 - k = ',k),
+     main = paste0('Histograma de producción de carbón\npor países - áreas. Año 2019 - k = ',k),
      xlab = 'Intervalos de clase - Producción\n(en miles de toneladas métricas) de carbón',
      ylab = 'Frecuencia absoluta')
 }
@@ -340,7 +340,7 @@ A través del histograma se puede aproximar la fdp de la variable aleatoria cont
 
 ```{r}
 h_dens = hist(charcoal_prd19$Quantity,prob=TRUE,
-         main = 'Histograma de producción de carbón por paises - áreas\nAño 2019',
+         main = 'Histograma de producción de carbón por países - áreas\nAño 2019',
          xlab = 'Intervalos de clase - Producción (en miles de toneladas métricas) de carbón',
          ylab = 'Densidad')
 ```
@@ -381,7 +381,7 @@ A partir de la estimación kernel de la densidad (KDE por sus siglas en inglés)
 
 hist(charcoal_prd19$Quantity, # Histograma
      prob = TRUE, ylim=c(0,0.0030),xlim=c(-4,6500),
-     main = 'Histograma con KDE de producción de carbón por paises - áreas\nAño 2019',
+     main = 'Histograma con KDE de producción de carbón por países - áreas\nAño 2019',
      xlab = 'Producción (en miles de toneladas métricas) de carbón',
      ylab = 'Densidad')
 lines(density(charcoal_prd19$Quantity), # Densidad
@@ -440,7 +440,7 @@ Para finalizar esta introducción, concluímos con una herramienta gráfica impo
 
 ```{r}
 plot(charcoal_bivar$Charcoal_Production,charcoal_bivar$Charcoal_Consumption,
-     main = 'Diagrama de dispersión de consumo y producción de carbón\n por paises - áreas. Año 2019',
+     main = 'Diagrama de dispersión de consumo y producción de carbón\n por países - áreas. Año 2019',
      xlab = 'Producción (en miles de toneladas métricas) de carbón',
      ylab = 'Consumo (en miles de toneladas métricas) de carbón')
 ```
@@ -453,7 +453,7 @@ library(ggplot2)
 library(ggExtra)
 g_base = ggplot(charcoal_bivar, aes(x = Charcoal_Production,
                                     y = Charcoal_Consumption)) + 
-         labs(title="Diagrama de dispersión de consumo y producción de carbón\npor paises - áreas. Año 2019") +
+         labs(title="Diagrama de dispersión de consumo y producción de carbón\npor países - áreas. Año 2019") +
          xlab("Producción (en miles de toneladas métricas) de carbón") + 
          ylab("Consumo (en miles de toneladas métricas) de carbón") +
          geom_point()
