@@ -148,7 +148,7 @@ En general, al medir una variable, los datos observados pueden clasificarse en d
 
 -   Razón (cuantitativa). Ej: Cantidad total de producción de carbón en toneladas métricas.
 
-    -   Relación de igualdad - desigualdad + Orden **+ Cero absoluto**. Además de las relaciones anteriores, se tiene que las razones en cualquier punto de la escala tienen el mismo significado. Si en tres zonas X, Y y Z la cantidad total de producción de carbón en toneladas métricas es de 40°C, 20°C y 10°C respectivamente, la zona X produjo el doble de la zona Y, mientras que la zona Z produjo la mitad de lo que produjo la zona Y. La particularidad de esta escala es que asigna el valor 0 con ausencia de la característica, es decir, tiene *cero absoluto* (por ejemplo una producción 0 toneladas métricas implica ausencia de producción), esta propiedad permite la comparación de razones.
+    -   Relación de igualdad - desigualdad + Orden **+ Cero absoluto**. Además de las relaciones anteriores, se tiene que las razones en cualquier punto de la escala tienen el mismo significado. Si en tres zonas X, Y y Z la cantidad total de producción de carbón en toneladas métricas es de 40, 20 y 10 respectivamente, la zona X produjo el doble de la zona Y, mientras que la zona Z produjo la mitad de lo que produjo la zona Y. La particularidad de esta escala es que asigna el valor 0 con ausencia de la característica, es decir, tiene *cero absoluto* (por ejemplo una producción 0 toneladas métricas implica ausencia de producción), esta propiedad permite la comparación de razones.
 
 ### Clase
 
